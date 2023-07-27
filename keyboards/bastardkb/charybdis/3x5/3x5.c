@@ -41,31 +41,28 @@
 led_config_t g_led_config = { {
     /* Key Matrix to LED index. */
     // Left split.
-    {      2,      3,      8,      9,     12 }, // Top row
-    {      1,      4,      7,     10,     13 }, // Middle row
-    {      0,      5,      6,     11,     14 }, // Bottom row
-    {     17, NO_LED,     15,     16, NO_LED }, // Thumb cluster
+    {      0,      1,      2,      3,      4 }, // Top row
+    {      5,      6,      7,      8,      9 }, // Middle row
+    {     10,     11,     12,     13,     14 }, // Bottom row
+    { NO_LED, NO_LED, NO_LED,     15,     16 }, // Thumb cluster
     // Right split.
-    {     20,     21,     26,     27,     30 }, // Top row
-    {     19,     22,     25,     28,     31 }, // Middle row
-    {     18,     23,     24,     29,     32 }, // Bottom row
-    {     33, NO_LED,     34, NO_LED, NO_LED }, // Thumb cluster
+    {     17,     18,     19,     20,     21}, // Top row
+    {     22,     23,     24,     25,     26}, // Middle row
+    {     26,     28,     29,     30,     31}, // Bottom row
+    {     32,     33, NO_LED, NO_LED, NO_LED }, // Thumb cluster
 }, {
     /* LED index to physical position. */
-    // Left split.
-    /* index=0  */ {   0,  42 }, {   0,  21 }, {   0,   0 }, // col 1 (left most)
-    /* index=3  */ {  18,   0 }, {  18,  21 }, {  18,  42 }, // col 2
-    /* index=6  */ {  36,  42 }, {  36,  21 }, {  36,   0 },
-    /* index=9  */ {  54,   0 }, {  54,  21 }, {  54,  42 },
-    /* index=12 */ {  72,   0 }, {  72,  21 }, {  72,  42 },
-    /* index=15 */ {  72,  64 }, {  90,  64 }, { 108,  64 }, // Thumb cluster
-    // Right split.
-    /* index=18 */ { 224,  42 }, { 224,  21 }, { 224,   0 }, // col 10 (right most)
-    /* index=21 */ { 206,   0 }, { 206,  21 }, { 206,  42 }, // col 9
-    /* index=24 */ { 188,  42 }, { 188,  21 }, { 188,   0 },
-    /* index=27 */ { 170,   0 }, { 170,  21 }, { 170,  42 },
-    /* index=30 */ { 152,   0 }, { 152,  21 }, { 152,  42 },
-    /* index=33 */ { 134,  64 }, { 152,  64 }, {   0,   0 },
+    // Left split arrangement
+    /* first  row */ {   0,   0 }, {  18,   0 }, {  36,   0 }, {  54,   0 }, {  72,   0 },
+    /* second row */ {   0,  21 }, {  18,  21 }, {  36,  21 }, {  54,  21 }, {  72,  21 },
+    /* thirt  row */ {   0,  42 }, {  18,  42 }, {  36,  42 }, {  54,  42 }, {  72,  42 },
+    /* thumb      */                                                       {  72,  64 }, { 90,  64 },
+
+    // Right split arrangement
+    /* first  row */               { 152,   0 }, { 170,   0 }, { 188,   0 }, { 206,   0 }, { 224,   0 }, 
+    /* second row */               { 152,  21 }, { 170,  21 }, { 188,  21 }, { 206,  21 }, { 224,  21 }, 
+    /* third  row */               { 152,  42 }, { 170,  42 }, { 188,  42 }, { 206,  42 }, { 224,  42 },
+    /* thumbs     */ { 134,  64 }, { 152,  64 }, 
 }, {
     /* LED index to flag. */
     // Left split.

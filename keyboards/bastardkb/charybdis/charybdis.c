@@ -27,7 +27,7 @@
 
 #ifdef POINTING_DEVICE_ENABLE
 #    ifndef CHARYBDIS_MINIMUM_DEFAULT_DPI
-#        define CHARYBDIS_MINIMUM_DEFAULT_DPI 400
+#        define CHARYBDIS_MINIMUM_DEFAULT_DPI 1200
 #    endif // CHARYBDIS_MINIMUM_DEFAULT_DPI
 
 #    ifndef CHARYBDIS_DEFAULT_DPI_CONFIG_STEP
@@ -370,15 +370,15 @@ void housekeeping_task_kb(void) {
 #endif     // POINTING_DEVICE_ENABLE
 
 #if defined(KEYBOARD_bastardkb_charybdis_3x5_blackpill) || defined(KEYBOARD_bastardkb_charybdis_4x6_blackpill)
-// void keyboard_pre_init_kb(void) {
-//     setPinInputHigh(A0);
-//     keyboard_pre_init_user();
-// }
+void keyboard_pre_init_kb(void) {
+    setPinInputHigh(A0);
+    keyboard_pre_init_user();
+}
 
-// void matrix_scan_kb(void) {
-//     if (!readPin(A0)) {
-//         reset_keyboard();
-//     }
-//     matrix_scan_user();
-// }
+void matrix_scan_kb(void) {
+    if (!readPin(A0)) {
+        reset_keyboard();
+    }
+    matrix_scan_user();
+}
 #endif // KEYBOARD_bastardkb_charybdis_3x5_blackpill || KEYBOARD_bastardkb_charybdis_4x6_blackpill
