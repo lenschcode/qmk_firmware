@@ -6,6 +6,7 @@ ENCODER_ENABLE = no					# encoder support
 BOOTMAGIC_ENABLE = yes
 
 CUSTOM_RGB = yes					# rgb effects and custom layer states
+OS_DETECTION_ENABLE = yes			# allow to change keyboard layout based on os
 
 # include all my custom files 
 INTROSPECTION_KEYMAP_C = combos/combos.c
