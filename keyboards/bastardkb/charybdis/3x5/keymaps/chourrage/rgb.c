@@ -29,7 +29,7 @@ void keyboard_post_init_user(void) {
     
 }
 
-void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
+bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
     // match effect speed to wpm
     // rgb_matrix_set_speed_noeeprom(40 + (get_current_wpm()/5));
 
@@ -60,6 +60,7 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
             default:
                 break;
         }
+
     } 
 
     // indicate active moddifiers
@@ -88,6 +89,8 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
             // RGB_MATRIX_INDICATOR_SET_COLOR(5, 0, 0, 0);
         }
     }
+
+    return true;
 }
 
 void shutdown_user(){

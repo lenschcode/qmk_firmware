@@ -17,7 +17,6 @@
 #pragma once
 
 /* mod tap */
-#define IGNORE_MOD_TAP_INTERRUPT
 #define TAPPING_TERM 250
 #define TAPPING_TERM_PER_KEY
 #define TAPPING_FORCE_HOLD_PER_KEY
@@ -30,6 +29,14 @@
 #define COMBO_TERM 30
 #define COMBO_TERM_PER_COMBO
 
+// startup connection error fix
+#define SPLIT_WATCHDOG_ENABLE
+
+/* bootmagic */
+#define BOOTMAGIC_LITE_ROW 0
+#define BOOTMAGIC_LITE_COLUMN 0
+#define BOOTMAGIC_LITE_ROW_RIGHT 0
+#define BOOTMAGIC_LITE_COLUMN_RIGHT 9
 
 /* RGB Matrix. */
 #ifdef RGB_MATRIX_ENABLE

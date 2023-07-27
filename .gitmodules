@@ -25,3 +25,6 @@
 	path = lib/lvgl
 	url = https://github.com/qmk/lvgl.git
 	branch = release/v8.2
+[submodule "keyboards/bastardkb/charybdis/3x5/keymaps/chourrage/combos"]
+	path = keyboards/bastardkb/charybdis/3x5/keymaps/chourrage/combos
+	url = git@github.com:lenschcode/combos.git
