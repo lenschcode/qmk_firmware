@@ -47,11 +47,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_SYMBOLS] = LAYOUT_charybdis_3x5(
   // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
-       KC_GRV,  KC_AT,   KC_LCBR, KC_RCBR, KC_PIPE,   RALT(KC_BSLS), RALT(KC_5), RALT(KC_G), RALT(KC_F), RALT(KC_SLSH),
+       KC_GRV,  KC_AT,   KC_LBRC, KC_RBRC, KC_PIPE,   RALT(KC_BSLS), RALT(KC_5), RALT(KC_G), RALT(KC_F), RALT(KC_SLSH),
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
        KC_EXLM, KC_CIRC, KC_LPRN, KC_RPRN, KC_HASH,   KC_ASTR, KC_BSLS, KC_EQL,  KC_PLUS, KC_DQT,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-       KC_TILD, KC_DLR,  KC_LBRC, KC_RBRC, KC_PERC,   KC_PIPE, KC_AMPR, KC_LABK, KC_RABK, KC_QUES,
+       KC_TILD, KC_DLR,  KC_LCBR, KC_RCBR, KC_PERC,   KC_PIPE, KC_AMPR, KC_LABK, KC_RABK, KC_QUES,
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
                          _______, _______, _______,    _______, _______
   //                   ╰───────────────────────────╯ ╰──────────────────╯
