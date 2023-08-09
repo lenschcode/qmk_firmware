@@ -16,6 +16,9 @@ enum charybdis_keymap_layers {
 #define MOD_LOPT MOD_LALT
 #define MOD_ROPT MOD_RALT
 
+#define MC_HOME LGUI(KC_LEFT)
+#define MC_END LGUI(KC_RIGHT)
+
 #define KC_AE RALT(KC_Q)//RALT(KC_A) -- for eurkey
 #define KC_OE RALT(KC_P)//RALT(KC_O)
 #define KC_UE RALT(KC_Y)//RALT(KC_U)
