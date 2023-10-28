@@ -29,7 +29,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├─────────────────────────────────────────────┤  ├─────────────────────────────────────────────┤
           KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,       KC_K,    KC_H, KC_COMM,  KC_DOT, KC_SLSH,
   // ╰─────────────────────────────────────────────┤  ├─────────────────────────────────────────────╯
-                         XXXXXXX, SPC_LAY, ESC_LAY,      BSP_LAY, OS_SHFT
+                          KC_F3, SPC_LAY, ESC_LAY,      BSP_LAY, OS_SHFT
   //                   ╰───────────────────────────╯ ╰──────────────────╯
   ),
 
@@ -42,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
        KC_LGUI,KC_INSERT,KC_BSPC, KC_DEL,  KC_MPLY,    KC_PLUS,   KC_4,    KC_5,    KC_6,   KC_NO,
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
-                         _______, _______, _______,    _______, KC_LCTL
+                         _______,  _______, _______,    _______, KC_LCTL
   //                   ╰───────────────────────────╯ ╰──────────────────╯
   ),
 #endif
@@ -63,11 +63,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_SYMBOLS] = LAYOUT_charybdis_3x5(
   // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
-       KC_GRV,  KC_AT,   KC_LBRC, KC_RBRC, KC_PIPE,   RALT(KC_BSLS), RALT(KC_5), RALT(KC_G), RALT(KC_F), RALT(KC_SLSH),
+       KC_GRV,  KC_AT,   KC_LCBR, KC_RCBR, KC_PIPE,   RALT(KC_BSLS), RALT(KC_5), RALT(KC_G), RALT(KC_F), RALT(KC_SLSH),
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
        KC_EXLM, KC_CIRC, KC_LPRN, KC_RPRN, KC_HASH,   KC_ASTR, KC_BSLS, KC_EQL,  KC_PLUS, KC_DQT,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-       KC_TILD, KC_DLR,  KC_LCBR, KC_RCBR, KC_PERC,   KC_PIPE, KC_AMPR, KC_LABK, KC_RABK, KC_QUES,
+       KC_TILD, KC_DLR,  KC_LBRC, KC_RBRC, KC_PERC,   KC_PIPE, KC_AMPR, KC_LABK, KC_RABK, KC_QUES,
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
                          _______, _______, _______,    _______, _______
   //                   ╰───────────────────────────╯ ╰──────────────────╯
@@ -90,3 +90,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // layer_state_t layer_state_set_user(layer_state_t state) {
 //     return update_tri_layer_state(state, _SYMBOLS, _NUMNAV, _FUNC);
 // }
+
+
+// #if defined(ENCODER_MAP_ENABLE)
+// const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
+// //     [_COLEMAK] =   { ENCODER_CCW_CW(KC_PGUP, KC_PGDN)},
+//     [_COLEMAK] =   { ENCODER_CCW_CW(ALT_TAB, ALT_SHFT_TAB)},
+//     [_NUMNAV] =  { ENCODER_CCW_CW(LSFT(KC_LEFT), LSFT(KC_RIGHT))},
+//     [_SYMBOLS] =  { ENCODER_CCW_CW(RGB_VAD, RGB_VAI)},
+//     [_FUNC] =  { ENCODER_CCW_CW(RGB_VAD, RGB_VAI)}
+// };
+// #endif
+
+extern const uint16_t PROGMEM encoder_map[4][1][2];
